@@ -1,0 +1,8 @@
+src/obj/
+src/bin/
+src/Properties/
+*.user
+published/appsettings.Production.json
+published/appsettings.Development.json
+src/appsettings.Production.json
+src/appsettings.Development.json

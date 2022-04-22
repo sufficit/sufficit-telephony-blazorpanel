@@ -1,0 +1,15 @@
+.events-monitor {
+    .card {
+        height: fit-content;
+
+        .card-header {
+            small {
+                font-variant: petite-caps;
+            }
+
+            img.avatar {
+                border: 0.1px solid rgba(0, 0, 0, .3);
+            }
+        }
+    }
+}
