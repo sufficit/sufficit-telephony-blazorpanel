@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
+using Sufficit.Telephony.BlazorPanel;
 using Sufficit.Telephony.EventsPanel;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddEventsPanel();
+builder.Services.AddSingleton<IEventsPanelCardCollection, EventsPanelCardGroupedCollection>();
 
 var app = builder.Build();
 

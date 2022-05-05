@@ -6,3 +6,5 @@ published/appsettings.Production.json
 published/appsettings.Development.json
 src/appsettings.Production.json
 src/appsettings.Development.json
+published/appsettings.Production-Hscor.json
+src/appsettings.Production-Hscor.json

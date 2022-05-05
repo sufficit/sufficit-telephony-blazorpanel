@@ -1,4 +1,24 @@
 ﻿@charset "UTF-8";
+.shaking {
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: both;
+  animation-play-state: running;
+  animation-name: shake; }
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-0.3px, 0, 0); }
+  20%, 80% {
+    transform: translate3d(0.3px, 0, 0); }
+  30%, 50%, 70% {
+    transform: translate3d(-0.3px, 0, 0); }
+  40%, 60% {
+    transform: translate3d(0.3px, 0, 0); } }
+
 hr.horizontal.discrete {
   background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.15), transparent); }
 

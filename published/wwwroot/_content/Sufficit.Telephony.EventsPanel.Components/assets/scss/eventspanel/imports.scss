@@ -11,5 +11,34 @@
                 border: 0.1px solid rgba(0, 0, 0, .3);
             }
         }
+
+        .card-channel {
+            &[data-hangup] {
+                text-decoration: line-through;
+            }
+
+            .card-channel-actions {
+                i {
+                    vertical-align: middle;
+                }
+
+                &[data-state='Ring']:not([data-hangup]), &[data-state='Ringing']:not([data-hangup]) {
+                    i {
+                        @extend .shaking;
+                    }
+                }
+            }
+        }
     }
+}
+
+.shaking {
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: running;
+    animation-name: shake;
 }
