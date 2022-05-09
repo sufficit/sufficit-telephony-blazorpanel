@@ -6,10 +6,11 @@
     animation-direction: normal;
     animation-fill-mode: both;
     animation-play-state: running;
-    animation-name: shake;
+    animation-name: shake-animation;
+    -webkit-animation: shake-animation 0.5s steps(5, start) infinite;
 }
 
-@keyframes shake {
+@keyframes shake-animation {
     10%, 90% {
         transform: translate3d(-0.3px, 0, 0);
     }
@@ -24,5 +25,29 @@
 
     40%, 60% {
         transform: translate3d(0.3px, 0, 0);
+    }
+}
+
+.blinking {
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: running;
+    animation-name: blink-animation;
+    -webkit-animation: blink-animation 0.5s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
     }
 }

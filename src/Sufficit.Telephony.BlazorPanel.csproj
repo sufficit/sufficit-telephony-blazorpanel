@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="EventsPanelCardGroupedCollection.cs" />
+    <Compile Remove="EventsPanelReadOnlyCardMonitor.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\sufficit-blazor-ui-material\src\Sufficit.Blazor.UI.Material.csproj" />
     <ProjectReference Include="..\..\sufficit-telephony-eventspanel-components\src\Sufficit.Telephony.EventsPanel.Components.csproj" />
     <ProjectReference Include="..\..\sufficit-telephony-eventspanel\src\Sufficit.Telephony.EventsPanel.csproj" />

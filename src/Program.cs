@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddEventsPanel();
-builder.Services.AddSingleton<IEventsPanelCardCollection, EventsPanelCardGroupedCollection>();
+//builder.Services.AddSingleton<IEventsPanelCardCollection, EventsPanelCardGroupedCollection>();
 
 var app = builder.Build();
 

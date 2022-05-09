@@ -8,13 +8,24 @@
     text-decoration: line-through; }
   .events-monitor .card .card-channel .card-channel-actions i {
     vertical-align: middle; }
+  .events-monitor .card .card-channel .card-channel-actions[data-state='Ring']:not([data-hangup]) i, .events-monitor .card .card-channel .card-channel-actions[data-state='Ringing']:not([data-hangup]) i {
+    animation: blink-animation 0.5s steps(5, start) infinite; }
 
-.shaking, .events-monitor .card .card-channel .card-channel-actions[data-state='Ring']:not([data-hangup]) i, .events-monitor .card .card-channel .card-channel-actions[data-state='Ringing']:not([data-hangup]) i {
-  animation-duration: 0.5s;
-  animation-timing-function: ease-out;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-fill-mode: both;
-  animation-play-state: running;
-  animation-name: shake; }
+.events-panel .card-trunks, .events-panel .card-queues {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 300px)); }
+
+.card[data-kind="queue"] {
+  max-width: 300px; }
+  .card[data-kind="queue"][data-monitor] {
+    background: rgba(180, 240, 255, 0.1); }
+  .card[data-kind="queue"] div[data-kind="member"] {
+    line-height: 1.8rem; }
+    .card[data-kind="queue"] div[data-kind="member"] i {
+      font-size: 1.2rem; }
+    .card[data-kind="queue"] div[data-kind="member"][data-status="unavailable"] i {
+      color: gray; }
+    .card[data-kind="queue"] div[data-kind="member"][data-status="inuse"] i {
+      color: #ffbb68; }
+
+.card[data-kind="trunk"] {
+  max-width: 300px; }

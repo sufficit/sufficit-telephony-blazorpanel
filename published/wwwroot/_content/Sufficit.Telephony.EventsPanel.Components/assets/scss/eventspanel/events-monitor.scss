@@ -24,21 +24,10 @@
 
                 &[data-state='Ring']:not([data-hangup]), &[data-state='Ringing']:not([data-hangup]) {
                     i {
-                        @extend .shaking;
+                        animation: blink-animation 0.5s steps(5, start) infinite;
                     }
                 }
             }
         }
     }
-}
-
-.shaking {
-    animation-duration: 0.5s;
-    animation-timing-function: ease-out;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-    animation-fill-mode: both;
-    animation-play-state: running;
-    animation-name: shake;
 }

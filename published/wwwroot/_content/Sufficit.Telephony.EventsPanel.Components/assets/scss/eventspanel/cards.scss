@@ -1,0 +1,3 @@
+.events-panel .card-trunks, .events-panel .card-queues {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
+}
