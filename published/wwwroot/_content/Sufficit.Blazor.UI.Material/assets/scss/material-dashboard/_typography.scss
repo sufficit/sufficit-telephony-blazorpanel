@@ -89,12 +89,14 @@ a {
   color: $dark;
 }
 
+/*
 .text-sm {
   line-height: $text-sm-line-height;
 }
 .text-xs {
   line-height: $text-xs-line-height;
 }
+*/
 
 p, .p {
   @include font-size($p-font-size);

@@ -18242,12 +18242,14 @@ a {
   letter-spacing: 0rem;
   color: #344767; }
 
+/*
 .text-sm {
-  line-height: 1.5; }
-
+  line-height: $text-sm-line-height;
+}
 .text-xs {
-  line-height: 1.25; }
-
+  line-height: $text-xs-line-height;
+}
+*/
 p, .p {
   font-size: 1rem; }
 

@@ -9,7 +9,7 @@ WorkingDirectory=/opt/sufficit-telephony-blazorpanel/
 User=dotnetuser  
 Group=dotnetuser
 
-SyslogIdentifier=[dotnet][blazor-panel]
+SyslogIdentifier=[sufficit][blazorpanel]
 StandardOutput=syslog
 StandardError=syslog 
 

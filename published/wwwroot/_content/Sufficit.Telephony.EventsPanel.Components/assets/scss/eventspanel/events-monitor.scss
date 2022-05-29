@@ -21,10 +21,14 @@
                 i {
                     vertical-align: middle;
                 }
+            }
 
-                &[data-state='Ring']:not([data-hangup]), &[data-state='Ringing']:not([data-hangup]) {
-                    i {
-                        animation: blink-animation 0.5s steps(5, start) infinite;
+            &:not([data-hangup]) {
+                .card-channel-actions {
+                    [data-state='Ring'], [data-state='Ringing'] {
+                        i {
+                            animation: blink-animation 0.5s steps(5, start) infinite;
+                        }
                     }
                 }
             }

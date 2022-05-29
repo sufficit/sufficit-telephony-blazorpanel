@@ -1,2 +1,36 @@
 ﻿@page "/"
-<EventsPanel></EventsPanel>
+<CascadingAuthenticationState>
+    <AuthorizeView>
+        <Authorized>   
+            <PanelGenerator></PanelGenerator>
+        </Authorized>
+        <Authorizing>Enchaminhado para login</Authorizing>
+        <NotAuthorized>
+            @if (context.User.Identity == null || !context.User.Identity.IsAuthenticated)
+                {
+                    <div class="card customNotAuthenticated">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    Você não está autenticado e não possui permissão para acessar este recurso.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <RedirectToLogin></RedirectToLogin>
+                }
+                else
+                {
+                    <div class="card customNotAuthorized">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    Você não possui permissão para acessar este recurso.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+        </NotAuthorized>
+    </AuthorizeView>
+</CascadingAuthenticationState>
