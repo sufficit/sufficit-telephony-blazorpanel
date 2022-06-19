@@ -8,3 +8,5 @@ src/appsettings.Production.json
 src/appsettings.Development.json
 published/appsettings.Production-Hscor.json
 src/appsettings.Production-Hscor.json
+src/appsettings.Development-Sufficit.json
+src/appsettings.Production-Sufficit.json

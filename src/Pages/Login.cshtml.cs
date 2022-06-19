@@ -18,8 +18,11 @@ namespace Sufficit.Telephony.BlazorPanel.Pages
 
         public async Task OnGet(string redirectUri)
         {
-            _logger.LogInformation("challenging");
-            await HttpContext.ChallengeAsync(OpenIdConnectDefaults.AuthenticationScheme, new AuthenticationProperties() { RedirectUri = redirectUri });
+            if (HttpContext.User.Identity == null || !HttpContext.User.Identity.IsAuthenticated)
+            {
+                _logger.LogInformation("challenging");
+                await HttpContext.ChallengeAsync(new AuthenticationProperties() { RedirectUri = redirectUri });
+            }
         }
     }
 }
