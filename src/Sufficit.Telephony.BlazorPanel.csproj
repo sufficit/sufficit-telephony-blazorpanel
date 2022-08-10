@@ -16,11 +16,11 @@
     <PackageReference Include="Grpc.AspNetCore.Server" Version="2.46.0" />
     <PackageReference Include="Grpc.AspNetCore.Web" Version="2.46.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="6.0.5" />
-    <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="6.0.5" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="6.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="6.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="6.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="6.0.6" />
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
-    <PackageReference Include="Microsoft.JSInterop" Version="6.0.5" />
+    <PackageReference Include="Microsoft.JSInterop" Version="6.0.6" />
   </ItemGroup>
 
   <ItemGroup>

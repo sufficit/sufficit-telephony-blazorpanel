@@ -1,23 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Sufficit.Blazor.UI.Material.Extensions;
-using Sufficit.Telephony.EventsPanel;
-using Microsoft.Extensions.Hosting;
-using System;
-using System.IO;
-using System.Net.Http;
-using Microsoft.IdentityModel.Tokens;
-using Microsoft.IdentityModel.Protocols.OpenIdConnect;
-using Microsoft.IdentityModel.Logging;
-using Microsoft.AspNetCore.Authentication.OpenIdConnect;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc.Authorization;
-using Microsoft.AspNetCore.Authentication.Cookies;
+﻿using Sufficit.Telephony.EventsPanel;
 using Microsoft.AspNetCore.Hosting.Server.Features;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.AspNetCore.ResponseCompression;
 using Sufficit.Client;
+using Sufficit.Blazor.UI.Material;
 
 namespace Sufficit.Telephony.BlazorPanel
 {
