@@ -61,20 +61,21 @@ namespace Sufficit.Telephony.BlazorPanel
             }
         }
 
-        private static void SetProtocols(object target, HttpProtocols protocols)
+        private static void SetProtocols(object? target, HttpProtocols protocols)
         {
-            var field = target.GetType().GetField("_endpointDefaultProtocols", BindingFlags.Instance | BindingFlags.NonPublic);
+            var field = target?.GetType().GetField("_endpointDefaultProtocols", BindingFlags.Instance | BindingFlags.NonPublic);
             if (field == null)
             {
                 // Ignore for https
                 return;
             }
+
             field.SetValue(target, protocols);
         }
 
         public async Task OnConnectAsync(ConnectionContext context)
         {
-            var hasHttp2Preface = await HasHttp2Preface(context.Transport.Input).ConfigureAwait(false);
+            var hasHttp2Preface = await HasHttp2Preface(context.Transport.Input).ConfigureAwait(false);            
             SetProtocols(next.Target, hasHttp2Preface ? HttpProtocols.Http2 : HttpProtocols.Http1);
             await next(context).ConfigureAwait(false);
         }
