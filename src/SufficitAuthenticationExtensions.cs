@@ -49,9 +49,11 @@ namespace Sufficit.Telephony.BlazorPanel
                     options.Authority = oidOptions.Authority;
                     options.ClientId = oidOptions.ClientId;
                     options.ClientSecret = oidOptions.ClientSecret;
-                    options.ResponseType = oidOptions.ResponseType;
                     options.SaveTokens = oidOptions.SaveTokens;
                     options.GetClaimsFromUserInfoEndpoint = oidOptions.GetClaimsFromUserInfoEndpoint;
+
+                    if (oidOptions.ResponseType != null)
+                        options.ResponseType = oidOptions.ResponseType;
 
                     if (oidOptions.Scopes != null)
                     {
