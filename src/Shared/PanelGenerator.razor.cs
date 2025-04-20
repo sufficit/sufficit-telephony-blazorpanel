@@ -78,7 +78,7 @@ namespace Sufficit.Telephony.BlazorPanel.Shared
                 else { Console.WriteLine("null options received from api"); }
 
                 // Getting options
-                var cards = await APIClient.Telephony.EventsPanel.GetUserCards();
+                var cards = await APIClient.Telephony.EventsPanel.GetCardsByUser(CancellationToken.None);
                 if (cards != null)
                 {
                     var weps = JsonSerializer.Serialize(cards);

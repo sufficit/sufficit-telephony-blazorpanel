@@ -84,8 +84,6 @@ namespace Sufficit.Telephony.BlazorPanel
 
             app.UseAuthentication();
             app.UseAuthorization();
-            app.UseSufficitEndPointsAPI();
-
 
             app.UseGrpcWeb(new GrpcWebOptions { DefaultEnabled = true });
 
