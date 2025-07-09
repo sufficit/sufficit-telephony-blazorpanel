@@ -7,11 +7,33 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Configurations>Debug;Release;Local</Configurations>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="EventsPanelCardGroupedCollection.cs" />
-    <Compile Remove="EventsPanelReadOnlyCardMonitor.cs" />
-  </ItemGroup>
+	
+	<ItemGroup Label="Sufficit Pack Items">
+		<None Include="../icon.png">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+		<None Include="../license">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+		<None Include="../readme.md">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
+	
+	<ItemGroup Label="Sufficit IA Configurations">
+		<None Include="../.github/copilot-instructions.md">
+			<Pack>False</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <Compile Remove="EventsPanelCardGroupedCollection.cs" />
+	  <Compile Remove="EventsPanelReadOnlyCardMonitor.cs" />
+	</ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Grpc.AspNetCore" Version="2.50.0" />
