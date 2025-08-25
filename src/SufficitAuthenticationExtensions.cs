@@ -10,7 +10,7 @@ namespace Sufficit.Telephony.BlazorPanel
     {
         public static IServiceCollection AddSufficitAuthentication(this IServiceCollection services)
         {
-            var provider = services.BuildServiceProvider();
+            var provider = services.BuildServiceProvider(false);
             var configuration = provider.GetRequiredService<IConfiguration>();
 
             // Definindo o local da configuração global
